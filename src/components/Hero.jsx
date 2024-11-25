@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="max-w-7xl mx-auto border-b-2">
       <div className="flex flex-col items-center my-20">
         <h1 className="text-5xl text-center lg:text-[6rem] p-2 uppercase font-bold">
-          Mansa Pavallion
+          Mansa Pavalion
         </h1>
         <p className="lg:mt-6 text-lg mb-4 font-medium tracking-tighter">
           The perfect venue for all your needs

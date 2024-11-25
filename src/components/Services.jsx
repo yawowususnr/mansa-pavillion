@@ -4,7 +4,7 @@ const Services = () => {
       name: "Weddings",
       description:
         "Comprehensive wedding planning services, including venue decoration, catering coordination, and event scheduling.",
-      link: "https://www.marthastewart.com/thmb/JIcBgX8cf75njo8L9k6cdMZuuok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/shayla-lester-wedding-ceremony-couple-vow-exchange-0621-87d46ed432dc4213bb0f3f501f5f77b7.jpg",
+      link: "https://i0.wp.com/www.joannamonger.com/wp-content/uploads/sites/4275/2017/07/Joanna_Monger_Photography_Court_in_the_square_wedding-1608-2.jpg?fit=1000%2C1000&ssl=1",
     },
     {
       name: "Corporate Events",
@@ -17,18 +17,6 @@ const Services = () => {
       description:
         "Fun and customizable birthday party packages for all ages, featuring decorations, entertainment, and catering.",
       link: "https://static.wixstatic.com/media/c8b394_6e676c6395764008a971d8a18160f0f6~mv2.jpg/v1/fill/w_1000,h_598,al_c,q_85,usm_0.66_1.00_0.01/c8b394_6e676c6395764008a971d8a18160f0f6~mv2.jpg",
-    },
-    {
-      name: "Workshops and Seminars",
-      description:
-        "Equipped spaces and support services for educational workshops, training sessions, and seminars.",
-      link: "https://www.marthastewart.com/thmb/JIcBgX8cf75njo8L9k6cdMZuuok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/shayla-lester-wedding-ceremony-couple-vow-exchange-0621-87d46ed432dc4213bb0f3f501f5f77b7.jpg",
-    },
-    {
-      name: "Concerts and Live Shows",
-      description:
-        "Spacious venues with advanced sound and lighting systems for concerts and live performances.",
-      link: "https://www.marthastewart.com/thmb/JIcBgX8cf75njo8L9k6cdMZuuok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/shayla-lester-wedding-ceremony-couple-vow-exchange-0621-87d46ed432dc4213bb0f3f501f5f77b7.jpg",
     },
   ];
 

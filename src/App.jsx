@@ -1,20 +1,17 @@
-import { useState } from "react";
-import Navbar from "./components/navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Reviews from "./components/Reviews";
-import ContactUs from "./components/ContactUs";
-import { Footer } from "./components/Footer";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Home from "./Home";
+import RequestServices from "./components/RequestServices";
+
+const About = () => <h1>About Page</h1>;
 
 export default function App() {
   return (
-    <main className="overflow-x-hidden antialiased text-neutral-800">
-      <Navbar />
-      <Hero />
-      <Services />
-      <Reviews />
-      <ContactUs />
-      <Footer />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        {/* Use element prop to render components */}
+        <Route path="/" element={<Home />} />
+        <Route path="/request" element={<RequestServices />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

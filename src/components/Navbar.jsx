@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/memorial_logo-trans.png";
 import { RiCloseLine, RiMenu3Line } from "@remixicon/react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,21 +12,21 @@ const Navbar = () => {
 
   const navbarLinks = [
     { name: "About", link: "/about" },
-    { name: "Contact Us", link: "/contact-us" },
     { name: "Reviews", link: "#reviews" },
+    { name: "Contact Us", link: "/request" },
   ];
 
   return (
     <nav className="border-b-2">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="pl-2">
-          <img src={logo} width={200} alt="Mansa Pavallion" />
+        <div className="pl-1">
+          <img src={logo} width={250} alt="Mansa Pavallion" />
         </div>
 
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-2xl pr-2 focus:outline-none"
+            className="text-2xl pr-1 focus:outline-none"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
@@ -37,7 +38,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.link}
-              className="uppercase text-sm font-medium"
+              className="uppercase text-xl font-medium"
             >
               {link.name}
             </a>
