@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navbar from "./components/navbar";
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
 import Services from "./components/Services";
+import Reviews from "./components/Reviews";
+import ContactUs from "./components/ContactUs";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
@@ -9,6 +12,9 @@ export default function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Reviews />
+      <ContactUs />
+      <Footer />
     </main>
-  )
+  );
 }
