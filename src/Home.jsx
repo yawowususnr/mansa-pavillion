@@ -5,6 +5,8 @@ import Reviews from "./components/Reviews";
 import ContactUs from "./components/ContactUs";
 import { Footer } from "./components/Footer";
 import RequestServices from "./components/RequestServices";
+import { Amenities } from "./components/Amenities";
+import Slideshow from "./components/Slideshow";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <Amenities />
       <Reviews />
+      <Slideshow />
       <ContactUs />
       <Footer />
     </main>

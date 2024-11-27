@@ -1,7 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/memorial_logo-trans.png";
 import { RiCloseLine, RiMenu3Line } from "@remixicon/react";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +16,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="border-b-2">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav className="bg-[#D8BA67] text-white relative">
+      {/* Main Navbar Container */}
+      <div className="w-11/12 mx-auto flex justify-between items-center py-4">
+        {/* Logo */}
         <div className="pl-1">
-          <img src={logo} width={250} alt="Mansa Pavallion" />
+          <img src={logo} width={140} alt="Mansa Pavallion" />
         </div>
 
+        {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
@@ -33,12 +35,17 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Navbar Links for Desktop */}
         <div className="hidden md:flex space-x-8 md:space-x-4 pr-2">
-          {navbarLinks.map((link) => (
+          {navbarLinks.map((link, index) => (
             <a
               key={link.name}
               href={link.link}
-              className="uppercase text-xl font-medium"
+              className={`uppercase text-xl font-medium hover:underline ${
+                index < navbarLinks.length - 1
+                  ? "border-r-2 border-white pr-4"
+                  : ""
+              }`}
             >
               {link.name}
             </a>
@@ -46,16 +53,17 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Dropdown Menu for Mobile */}
       <div
         className={`${
-          isOpen ? "block" : "hidden"
-        } md:hidden absolute bg-neutral-50 w-full py-5 px-4 mt-2 border-b-2`}
+          isOpen ? "flex" : "hidden"
+        } md:hidden flex-col bg-neutral-50 w-full py-5 px-4 border-t-2 absolute top-full left-0 z-10`}
       >
         {navbarLinks.map((link) => (
           <a
             key={link.name}
             href={link.link}
-            className="uppercase text-lg font-medium block py-2 tracking-wide"
+            className="uppercase text-lg font-medium block py-2 tracking-wide hover:text-[#D8BA67] hover:underline"
           >
             {link.name}
           </a>

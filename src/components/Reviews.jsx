@@ -67,7 +67,6 @@ const Reviews = () => {
                 />
                 <div>
                   <p className="text-sm fount-bold">{review.name}</p>
-                  {/* <p className="text-sm text-neutral-300">{review.review}</p> */}
                 </div>
               </div>
             </div>

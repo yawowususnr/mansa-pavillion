@@ -1,21 +1,33 @@
+import heroImage from "../assets/pavalion-sign.jpg";
+
 const Hero = () => {
   return (
-    <section className="max-w-7xl mx-auto border-b-2">
-      <div className="flex flex-col items-center my-20">
-        <h1 className="text-5xl text-center lg:text-[6rem] p-2 uppercase font-bold">
-          Mansa Pavalion
-        </h1>
-        <p className="lg:mt-6 text-lg mb-4 font-medium tracking-tighter">
-          The perfect venue for all your needs
-        </p>
+    <div className="relative bg-[#F1E4C1] h-screen">
+      {/* Background image with transparency */}
+      <img
+        src={heroImage}
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ opacity: 0.1 }}
+      />
+      {/* Centered Content */}
+      <div className="relative flex flex-col items-center justify-center h-full z-10 text-center">
+        <div className="w-2/5">
+          <h1 className="text-5xl lg:text-[6rem] uppercase mb-4 font-['Italiana'] font-light font- tracking-widest">
+            Mansa Pavilion
+          </h1>
+        </div>
 
-        <img
-          src="https://www.co.jackson.mi.us/ImageRepository/Document?documentID=12066"
-          alt=""
-          className="hidden md:block w-full h-[65vh] object-cover rounded-2xl p-2"
-        />
+        <div className="border-b-2 w-1/6 border-black"></div>
+
+        <p className="lg:mt-6 text-lg mb-6 font-medium tracking-tighter">
+          Come The perfect venue for all your needs
+        </p>
+        <button className="bg-[#D8BA67] text-white px-6 py-4 rounded-md font-medium text-lg hover:bg-[#c4a857] transition duration-300">
+          BOOK NOW
+        </button>
       </div>
-    </section>
+    </div>
   );
 };
 
