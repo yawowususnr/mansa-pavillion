@@ -20,6 +20,10 @@ const RequestServices = () => {
     });
   };
 
+  const goBack = () => {
+    navigate("/");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,7 +40,7 @@ const RequestServices = () => {
         }
       );
 
-      console.log("Request sent.");
+      alert("Request sent.");
       navigate("/");
     } catch (error) {
       console.error("Error submitting the form:", error);
@@ -147,9 +151,15 @@ const RequestServices = () => {
           <div>
             <button
               type="submit"
-              className="w-full py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="w-full py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mb-2"
             >
               Submit
+            </button>
+            <button
+              onClick={goBack}
+              className="w-full py-2 bg-red-500 text-white font-medium rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+            >
+              Cancel
             </button>
           </div>
         </form>

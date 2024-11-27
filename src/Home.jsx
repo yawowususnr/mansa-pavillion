@@ -13,7 +13,7 @@ export default function Home() {
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar />
       <Hero />
-      <Services />
+      {/* <Services /> */}
       <Amenities />
       <Reviews />
       <Slideshow />

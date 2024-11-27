@@ -1,3 +1,5 @@
+import crown from "../assets/mansa-crown.png"
+
 const Reviews = () => {
   const reviews = [
     {
@@ -45,7 +47,8 @@ const Reviews = () => {
 
   return (
     <section className="max-w-7xl mx-auto border-b-2" id="reviews">
-      <div className="my-20">
+        <div className="flex justify-center"> <img src={crown} className="w-12 mt-5" alt="" /></div>
+      <div className="mb-20 mt-5">
         <h2 className="text-xl lg:text-3xl tracking-tight text-center uppercase mb-12">
           REVIEWS
         </h2>
@@ -56,7 +59,7 @@ const Reviews = () => {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-neutral-300 p-10 mx-2 max-w-xs"
+              className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-[#D8BA67] p-10 mx-2 max-w-xs"
             >
               <p className="mb-4">{review.review}</p>
               <div className="flex items-center mt-4">

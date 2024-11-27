@@ -16,7 +16,20 @@ const Slideshow = () => {
     pauseOnHover: true,
   };
 
-  const images = [1, 2, 3, 4];
+  const images = [
+    {
+      link: "https://i.postimg.cc/7L1Yr4DZ/inside-1.jpg",
+    },
+    {
+      link: "https://i.postimg.cc/vBYy4cnT/3.jpg",
+    },
+    {
+      link: "https://i.postimg.cc/KY2PMSG6/1.jpg",
+    },
+    {
+      link: "https://i.postimg.cc/VNzPMCQz/inside-4.jpg",
+    },
+  ];
 
   return (
     <div className="p-5 bg-[#F1E4C1] flex justify-center">
@@ -25,7 +38,7 @@ const Slideshow = () => {
           {images.map((src, index) => (
             <div key={index} className="flex justify-center">
               <img
-                src={"https://i.postimg.cc/KY2PMSG6/1.jpg"}
+                src={src.link}
                 alt={`Slide ${index + 1}`}
                 className="w-full h-auto object-cover rounded-lg"
               />
