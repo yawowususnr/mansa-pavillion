@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
 const RequestServices = () => {
   const navigate = useNavigate();
@@ -10,6 +9,7 @@ const RequestServices = () => {
     Phone: "",
     Subject: "",
     Message: "",
+    Date: "", // New field for the date
   });
 
   const handleChange = (e) => {
@@ -29,14 +29,14 @@ const RequestServices = () => {
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzniDMgzfvWgr1Nc3kUpz-F2aTEsSYXNPYFtjQwG3NZBx8U68l5NYDCMU-f6fpOC4bO6A/exec",
+        "https://script.google.com/macros/s/AKfycbzxseUyZNgyuP7o1ZuHCwp0qBQ8FkhY7Tp688IPvGUBr5jCYUjzH0gMkEjsXjjeAqGk9w/exec",
         {
           method: "POST",
           mode: "no-cors",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Type": "application/json",
           },
-          body: new URLSearchParams(formData).toString(),
+          body: JSON.stringify(formData), // Send formData including the Date
         }
       );
 
@@ -49,11 +49,19 @@ const RequestServices = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="relative flex flex-col items-center justify-center">
+      {/* Exit Button */}
+      <button
+        onClick={goBack}
+        className="absolute top-4 right-4 bg-red-500 text-white font-medium px-4 py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+      >
+        Exit
+      </button>
+
       <h3 className="text-2xl pt-10 mx-6">
         Fill Out this form and we'll be in touch with you soon!
       </h3>
-      <div className="w-full  border-gray-100 pt-20">
+      <div className="w-full border-gray-100 pt-20">
         <form
           onSubmit={handleSubmit}
           className="mx-auto w-1/2 min-w-96 bg-white shadow-md rounded-lg p-6 space-y-6"
@@ -146,6 +154,23 @@ const RequestServices = () => {
               placeholder="Your message..."
               rows="4"
             ></textarea>
+          </div>
+
+          <div>
+            <label
+              htmlFor="Date"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Select a date:
+            </label>
+            <input
+              type="date"
+              name="Date"
+              id="Date"
+              value={formData.Date || ""}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
           </div>
 
           <div>

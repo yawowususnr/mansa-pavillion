@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden antialiased text-neutral-800">
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
       <HeroVar />
       {/* <Services /> */}
       <Amenities />

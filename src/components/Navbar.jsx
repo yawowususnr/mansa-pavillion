@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/memorial_logo-trans.png";
+import logo from "../assets/memorial_logo-trans2.png";
 import { RiCloseLine, RiMenu3Line } from "@remixicon/react";
 
 const Navbar = () => {
@@ -16,12 +16,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#D8BA67] text-white relative">
+    <nav className="bg-[#D8BA67] text-white fixed top-0 w-full z-50">
       {/* Main Navbar Container */}
       <div className="w-11/12 mx-auto flex justify-between items-center py-4">
         {/* Logo */}
         <div className="pl-1">
-          <img src={logo} width={140} alt="Mansa Pavallion" />
+          <img src={logo} width={80} alt="Mansa Pavallion" />
         </div>
 
         {/* Hamburger Menu for Mobile */}

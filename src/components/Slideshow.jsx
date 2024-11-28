@@ -19,15 +19,27 @@ const Slideshow = () => {
   const images = [
     {
       link: "https://i.postimg.cc/7L1Yr4DZ/inside-1.jpg",
+      description: "Indoor Event",
     },
     {
       link: "https://i.postimg.cc/vBYy4cnT/3.jpg",
+      description: "Outdoor Space",
     },
     {
       link: "https://i.postimg.cc/KY2PMSG6/1.jpg",
+      description: "Outdoor Space 2",
     },
     {
       link: "https://i.postimg.cc/VNzPMCQz/inside-4.jpg",
+      description: "Indoor Lights",
+    },
+    {
+      link: "https://i.postimg.cc/2jbq02Sc/300-capacity.jpg",
+      description: "300 Person Seating Capacity",
+    },
+    {
+      link: "https://i.postimg.cc/sX0hvLDS/ample-parking.jpg",
+      description: "Ample Parking Space",
     },
   ];
 
@@ -42,6 +54,7 @@ const Slideshow = () => {
                 alt={`Slide ${index + 1}`}
                 className="w-full h-auto object-cover rounded-lg"
               />
+              <h1 className="text-center">{src.description}</h1>
             </div>
           ))}
         </Slider>

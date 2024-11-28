@@ -61,15 +61,10 @@ const Reviews = () => {
               key={index}
               className="mt-10 flex flex-col items-center justify-center rounded-2xl border border-[#D8BA67] p-10 mx-2 max-w-xs"
             >
-              <p className="mb-4">{review.review}</p>
+              <p className="mb-4 text-2xl">{review.review}</p>
               <div className="flex items-center mt-4">
-                <img
-                  className="w-12 h-12 rounded-full mr-4 object-cover object-top"
-                  src={review.image}
-                  alt={review.name}
-                />
                 <div>
-                  <p className="text-sm fount-bold">{review.name}</p>
+                  <p className="text-lg fount-bold">{review.name}</p>
                 </div>
               </div>
             </div>
